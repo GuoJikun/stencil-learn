@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/stencil-learn.esm.js"></script>
-    <script nomodule src="/build/stencil-learn.js"></script>
-  </head>
-  <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/stencil-learn.esm.js"></script>
+  <script nomodule src="/build/stencil-learn.js"></script>
+</head>
+
+<body>
+  <web-text id="webText" text="默认值"></web-text>
+  <button id="btn">更改web-text组件的内容</button>
+</body>
+<script>
+  document.querySelector('#btn').addEventListener('click', () => {
+    document.querySelector('#webText').setAttribute('text', '更改后的值')
+  })
+</script>
+
 </html>
